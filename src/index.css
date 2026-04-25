@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #09090b;
+    --surface: #18181b;
+    --border: #27272a;
+    --text: #f4f4f5;
+    --text-muted: #a1a1aa;
+    --primary: #8b5cf6;
+    --primary-hover: #7c3aed;
+  }
+
+  body {
+    @apply bg-background text-text font-sans antialiased min-h-screen;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.08), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.08), transparent 25%);
+  }
+
+  ::selection {
+    background-color: rgba(139, 92, 246, 0.3); /* primary with opacity */
+    color: white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface/60 backdrop-blur-xl border border-border/50 rounded-2xl shadow-xl shadow-black/20;
+  }
+  
+  .glass-input {
+    @apply w-full bg-background/50 border border-border rounded-xl px-4 py-3 outline-none transition-all duration-300
+           focus:border-primary/50 focus:ring-2 focus:ring-primary/20 placeholder:text-text-muted/60 text-sm;
+  }
+
+  .glass-button {
+    @apply flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300
+           bg-primary text-white hover:bg-primary-hover shadow-lg shadow-primary/25 hover:shadow-primary/40
+           active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .glass-button-secondary {
+    @apply flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300
+           bg-surface border border-border text-text hover:bg-border/50 hover:text-white
+           active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-border/80 transition-colors;
+}
