@@ -1,6 +1,5 @@
 # TaskFlow - Gestão Inteligente de Tarefas
 
-![TaskFlow Header](https://raw.githubusercontent.com/TFS-Data/listas-tarefas/main/public/og-image.png)
 
 TaskFlow é uma aplicação moderna de lista de tarefas desenvolvida com uma estética **Dark Glassmorphism**, focada em produtividade, elegância e eficiência. O projeto utiliza as tecnologias mais recentes do ecossistema Web para entregar uma experiência de usuário premium.
 
@@ -65,5 +64,4 @@ Acesse o projeto online: **[https://listas-tarefas-two.vercel.app](https://lista
 
 O projeto utiliza **Row Level Security (RLS)** do Supabase, garantindo que as políticas de acesso sejam aplicadas diretamente na camada do banco de dados. Nenhuma chave sensível está exposta no código-fonte, utilizando variáveis de ambiente para configuração.
 
----
-Desenvolvido com ❤️ por Antigravity.
+Desenvolvido por [TFS Data](https://github.com/TFS-Data) com uso de ferramentas modernas de desenvolvimento assistido por IA
